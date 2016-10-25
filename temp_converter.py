@@ -59,7 +59,7 @@ def fahr_to_kelvin(temp_f):
 # adding missing parts to places (denoted with XX -letters) where instructed (with comments)
 
 # 4.1: Modify the temp_calculator function and add a third parameter called 'convert_from'
-def temp_calculator(temp, XX, convert_to):
+def temp_calculator(temp, convert_from, convert_to):
     # 4.2: Add description about the new 'convert_from' parameter to text below (see description of 'convert_to' and use that as a template):
     """
     Function for converting temperatures between Celsius, Kelvin and Fahrenheit.
@@ -86,33 +86,33 @@ def temp_calculator(temp, XX, convert_to):
         return converted_temp
 
     # 4.3 Add a condition to check if input temperature (i.e. 'convert_from') is in Celsius ("C")
-    elif convert_from == XX :
+    elif convert_from == "C":
         # Check if user wants the Celsius temperature in Fahrenheit
         if convert_to == "F":
             converted_temp = celsius_to_fahr(temp)
 
         # 4.3.1 Add conditional statement and conversion to convert Celsius to Kelvin
-        elif XX :
-            converted_temp = XX
+        elif convert_to : "K"
+            converted_temp = celsius_to_kelvin(temp_k=temp)
         else:
             # If other values are passed to 'convert_to' column, return None as result
             converted_temp = None
         # 4.3.2 Add a return statement for returning the value in 'converted_temp' -variable.
-        XX
+        return converted_temp
 
     # 4.4 Add a condition to check if input temperature (i.e. 'convert_from') is in Fahrenheit ("F")
-    elif XX :
+    elif coverted_from : "F"
         # 4.4.1 Add conditional statement and conversion to convert Fahrenheit to Celsius
-        if XX :
-            converted_temp = XX
+        if convert_to : "C"
+            converted_temp = fahrenheit_to_celsius(temp_k=temp)
         # 4.4.2 Add conditional statement and conversion to convert Fahrenheit to Kelvin
-        elif XX :
-            converted_temp = XX
+        elif convert_to : "K"
+            converted_temp = fahrenheit_to_kelvin(temp_k=temp)
         else:
             # If other values are passed to 'convert_to' column, return None as result
             converted_temp = None
         # 4.4.3 Add a return statement for returning the value in 'converted_temp' -variable.
-        XX
+        return converted_temp
 
     # If input temperature ('convert_from') is something else than ('C' | 'K' | 'F') send a notification about the issue.
     else:
